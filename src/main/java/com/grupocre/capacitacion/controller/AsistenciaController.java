@@ -13,7 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/api/asistencia")
-@CrossOrigin(origins = "*") // Para que tu frontend (React/HTML) pueda conectar
+@CrossOrigin(origins = "*")
 public class AsistenciaController {
 
     @Autowired
