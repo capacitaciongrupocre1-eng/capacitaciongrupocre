@@ -4,7 +4,8 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 # Etapa de ejecución (Run)
-FROM openjdk:17-jdk-slim
+# Cambiamos la imagen que dio error por esta que es más moderna
+FROM eclipse-temurin:17-jdk-alpine
 COPY --from=build /target/*.jar app.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar", "app.jar"]
